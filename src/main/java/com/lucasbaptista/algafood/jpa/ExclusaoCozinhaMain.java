@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import com.lucasbaptista.algafood.AlgafoodApiApplication;
 import com.lucasbaptista.algafood.domain.model.Cozinha;
 
-public class AlteracaoCozinhaMain {
+public class ExclusaoCozinhaMain {
 
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new SpringApplicationBuilder(AlgafoodApiApplication.class)
@@ -19,10 +19,8 @@ public class AlteracaoCozinhaMain {
 		
 		Cozinha cozinha = new Cozinha();
 		cozinha.setId(1L);
-		cozinha.setNome("Brasileira");
 		
-		cadastroCozinha.salvar(cozinha);
-		
+		cadastroCozinha.remover(cozinha);
 	}
 
 }
